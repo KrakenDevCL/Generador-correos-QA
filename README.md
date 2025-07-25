@@ -1,2 +1,3 @@
-# Generador-correos-QA
-Generador de correos de entrega a QA
+<h1>Generador de correos para entrega de desarrollo a QA</h1>
+
+- Version 1.1 (En desarrollo)
