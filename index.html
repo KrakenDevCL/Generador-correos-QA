@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Generador de Correo - Entrega a QA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-light">
+    <div class="container py-5">
+        <h2 class="mb-4">Generador de Correo: Entrega a QA</h2>
+
+        <form id="emailForm" class="mb-4">
+            <div class="mb-3">
+                <label for="modulo" class="form-label">Nombre del módulo</label>
+                <input type="text" class="form-control" id="modulo" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="contexto" class="form-label">Proyecto o excepción</label>
+                <select class="form-select" id="contexto" required>
+                    <option value="" disabled selected>Seleccionar...</option>
+                    <option value="Proyecto">Proyecto</option>
+                    <option value="Excepción">Excepción</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="modelo" class="form-label">Número(s) Taurus (separados por coma)</label>
+                <input type="text" class="form-control" id="modelo" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="version" class="form-label">Versión</label>
+                <input type="text" class="form-control" id="version" placeholder="Ej: 1.2.3.4" required />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Generar correo</button>
+        </form>
+
+        <div id="resultado" class="card d-none">
+            <div class="card-body">
+                <h5 class="card-title" id="correoTitulo"></h5>
+                <br>
+                <pre class="card-text" id="correoCuerpo" style="white-space: pre-wrap;"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
